@@ -2,26 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.box-shadow {
+    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.14688);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+input::placeholder {
+    color: #3D3B48;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 26px;
+    opacity: 0.75;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+input.error::placeholder {
+    color: transparent;
+}
+
+button {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.0908818);
+}
+
+form > div {font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 21px;
+    text-align: center;
+    color: #BAB7D4;
+}
+
+.pricing {
+    font-size: 15px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.267857px;
+    color: #FFFFFF;
+}
+
+img.error {
+    transform: translate(0, 60%);
 }
